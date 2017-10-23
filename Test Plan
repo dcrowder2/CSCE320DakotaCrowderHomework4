@@ -1,0 +1,6 @@
+The testing I did was using
+
+./dphil 6 3 9
+
+It did a good job showing the different philosophers and the state they are in, with no one philospher showing a large bias with the cpu in terms of process time. One thing that did happen a few times
+is that one philosopher would suddenly get a lot of eating time in, and I hypothesize that this is because of the unreliable nature of the rand, where it would sometimes favor the low amounts, so that some philosophers would not sleep at all, and process thousands of times in a second.

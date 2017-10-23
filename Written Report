@@ -1,0 +1,9 @@
+Dakota Crowder
+CSCE 320 Operating Systems
+Homework 4
+						Written Report and Design Document
+My code uses pthreads to run the dining philosophers problem. Each philosopher is a thread, they are given a name and a position that is their spot at the table, or in the semaphore for the forks.
+The forks semaphore is the actual table, where each philosopher is a position in the forks semaphore, their fork on the left is their postion, with the position +1 % numOfPhilosophers being their left
+fork. There is a mutex so only one philosopher at a time can try to dine, and the forks stop the adjacent philosophers from eating at the same time. The time spent eating is random, limited by user
+defined limit. After a philosopher is done eating, they release all of their utensils, and go back to thinking. The output that would show this running correctly would be that everyone is changing
+states, they go from thinking, to hungry, to eating, and finally back to thinking. The time they spend thinking and eating are different everytime, so you shouldn't see a linear progress for each philosopher, instead, everytime they go from eating to thinking, they output the number of times they have eaten, this is a nice way to show that one philosopher is or isn't eating in proportion to the other philosophers.
