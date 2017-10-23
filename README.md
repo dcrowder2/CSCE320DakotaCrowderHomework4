@@ -5,6 +5,7 @@ use make to compile
 make
 
 run by
+
 ./dphil <N> <0/K> <TIME>
   
 <N>:number of philosophers
